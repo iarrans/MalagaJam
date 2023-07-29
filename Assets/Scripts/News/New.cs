@@ -5,13 +5,12 @@ using UnityEngine.UI;
 
 public class New : MonoBehaviour
 {
-    [Header("News List")]
+    [Header("Player")]
     [SerializeField]
     Player player;
+    
+    public List<NewSO> newsList;
 
-    [Header("News List")]
-    [SerializeField]
-    List<NewSO> newsList;
 
     [Header("Current New")]
     [SerializeField]
