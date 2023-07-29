@@ -24,6 +24,8 @@ public class New : MonoBehaviour
     [SerializeField]
     Sprite image;
 
+    public Scrolls scrolls;
+
     public NewsGenerator generator;
 
     void Update()
@@ -35,7 +37,6 @@ public class New : MonoBehaviour
     {
         //TODO: pensar si al acertar algunas partes de la noticia puede llegar a dar visitas igualmente
         //o si sol hay dos sutiaciones posibles, fallo o acierto
-        generator.GenerateNew();
 
         foreach (NewSO news in generator.allNews)
         {
@@ -48,7 +49,6 @@ public class New : MonoBehaviour
 
         Debug.Log("Current new " + currentNew.id + " " + currentNew.title + " " + currentNew.subTitle);
         Debug.Log("In progress " + "subtitle=  " + subTitle + " image= " + image.name);
-        newsList.Remove(currentNew);
 
         if (currentNew.subTitle == subTitle && currentNew.image.name == image.name)
         {
@@ -60,7 +60,7 @@ public class New : MonoBehaviour
         {
             player.DecreaseVisualizations(5);
             player.DecreaseSanity(5);
-            Debug.Log("medio bien");
+            Debug.Log("regular");
         }
         else
         {
@@ -68,6 +68,19 @@ public class New : MonoBehaviour
             player.DecreaseSanity(0);
             Debug.Log("mal");
         }
+
+        newsList.Remove(currentNew);
+
+        scrolls.PopulateImagesScroll();
+        scrolls.PopulateSubtitlesScroll();
+        scrolls.PopulateTitlesScroll();
+
+
+        
+        generator.GenerateNew();
+        generator.nextNew += 1;
+
+
     }
 
     void GetNewInProgress()
