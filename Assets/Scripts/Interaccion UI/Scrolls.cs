@@ -5,7 +5,12 @@ using UnityEngine;
 public class Scrolls : MonoBehaviour
 {
     public New newManager;
+    //listas a mostrar
     public List<NewSO> newsList;
+    public List<string> titles;
+    public List<string> subtitles;
+    public List<Sprite> images;
+     
     public List<GameObject> titlesButtons;
     public List<GameObject> subtitlesButtons;
     public List<GameObject> imagesButtons;
@@ -23,9 +28,13 @@ public class Scrolls : MonoBehaviour
     {
         DeletePreviousButtons();
 
+        
+
         int distanciaY = 0;
 
-        foreach (NewSO neew in newsList){
+        titles = newManager.titles;
+
+        foreach (string title in titles){
 
             //instanciación botón
             GameObject button = Instantiate(titleButtonPrefab, titleButtonPrefab.transform.parent) as GameObject;
@@ -34,7 +43,7 @@ public class Scrolls : MonoBehaviour
             titlesButtons.Add(button);
 
             //personalización botón
-            button.GetComponent<TitleButton>().buttonText.text = neew.title;
+            button.GetComponent<TitleButton>().buttonText.text = title;
 
             //para la posición del botón. Relativizamos a botón padre y desplazamos hacia abajo
             button.GetComponent<RectTransform>().anchoredPosition = new Vector2(button.GetComponent<RectTransform>().anchoredPosition.x,
@@ -56,7 +65,9 @@ public class Scrolls : MonoBehaviour
 
         int distanciaY = 0;
 
-        foreach (NewSO neew in newsList)
+        subtitles = newManager.subtitles;
+
+        foreach (string subtitle in subtitles)
         {
 
             //instanciación botón
@@ -66,7 +77,7 @@ public class Scrolls : MonoBehaviour
             subtitlesButtons.Add(button);
 
             //personalización botón
-            button.GetComponent<SubtitleButton>().buttonText.text = neew.subTitle;
+            button.GetComponent<SubtitleButton>().buttonText.text = subtitle;
 
             //para la posición del botón. Relativizamos a botón padre y desplazamos hacia abajo
             button.GetComponent<RectTransform>().anchoredPosition = new Vector2(button.GetComponent<RectTransform>().anchoredPosition.x,
@@ -77,29 +88,7 @@ public class Scrolls : MonoBehaviour
             subtitleButtonPrefab.transform.parent.GetComponent<RectTransform>().sizeDelta = new Vector2(subtitleButtonPrefab.transform.parent.GetComponent<RectTransform>().sizeDelta.x,
                                                                                                   button.GetComponent<RectTransform>().sizeDelta.y * (distanciaY + 1)
                                                                                                   + 10 * (distanciaY + 1) + 20);
-            distanciaY = distanciaY + 1;
-
-            foreach (string falseSub in neew.falseSubtitles)
-            {
-                GameObject buttonFalse = Instantiate(subtitleButtonPrefab, subtitleButtonPrefab.transform.parent) as GameObject;
-                buttonFalse.tag = "Delete";
-                buttonFalse.SetActive(true);
-                subtitlesButtons.Add(buttonFalse);
-
-                //personalización botón
-                buttonFalse.GetComponent<SubtitleButton>().buttonText.text = falseSub;
-
-                //para la posición del botón. Relativizamos a botón padre y desplazamos hacia abajo
-                buttonFalse.GetComponent<RectTransform>().anchoredPosition = new Vector2(buttonFalse.GetComponent<RectTransform>().anchoredPosition.x,
-                                                                                    buttonFalse.GetComponent<RectTransform>().anchoredPosition.y -
-                                                                                    buttonFalse.GetComponent<RectTransform>().sizeDelta.y * (distanciaY)
-                                                                                    - 10 * distanciaY);
-
-                subtitleButtonPrefab.transform.parent.GetComponent<RectTransform>().sizeDelta = new Vector2(subtitleButtonPrefab.transform.parent.GetComponent<RectTransform>().sizeDelta.x,
-                                                                                                      buttonFalse.GetComponent<RectTransform>().sizeDelta.y * (distanciaY + 1)
-                                                                                                      + 10 * (distanciaY + 1) + 20);
-                distanciaY = distanciaY + 1;
-            }
+            distanciaY = distanciaY + 1;           
 
         }
 
@@ -111,7 +100,9 @@ public class Scrolls : MonoBehaviour
 
         int distanciaY = 0;
 
-        foreach (NewSO neew in newsList)
+        images = newManager.images;
+
+        foreach (Sprite neew in images)
         {
 
             //instanciación botón
@@ -121,7 +112,7 @@ public class Scrolls : MonoBehaviour
             titlesButtons.Add(button);
 
             //personalización botón
-            button.GetComponent<ImageButton>().buttonSprite.sprite = neew.image;
+            button.GetComponent<ImageButton>().buttonSprite.sprite = neew;
 
             //para la posición del botón. Relativizamos a botón padre y desplazamos hacia abajo
             button.GetComponent<RectTransform>().anchoredPosition = new Vector2(button.GetComponent<RectTransform>().anchoredPosition.x,

@@ -10,6 +10,9 @@ public class New : MonoBehaviour
     Player player;
     
     public List<NewSO> newsList;
+    public List<string> titles;
+    public List<string> subtitles;
+    public List<Sprite> images;
 
 
     [Header("Current New")]
@@ -47,9 +50,6 @@ public class New : MonoBehaviour
             }
         }
 
-        Debug.Log("Current new " + currentNew.id + " " + currentNew.title + " " + currentNew.subTitle);
-        Debug.Log("In progress " + "subtitle=  " + subTitle + " image= " + image.name);
-
         if (currentNew.subTitle == subTitle && currentNew.image.name == image.name)
         {
             player.IncreaseVisualizations(10);
@@ -69,7 +69,11 @@ public class New : MonoBehaviour
             Debug.Log("mal");
         }
 
+        //eliminar noticia de todas las listas
         newsList.Remove(currentNew);
+        titles.Remove(currentNew.title);
+        subtitles.Remove(currentNew.subTitle);
+        images.Remove(currentNew.image);
 
         scrolls.PopulateImagesScroll();
         scrolls.PopulateSubtitlesScroll();
@@ -80,6 +84,8 @@ public class New : MonoBehaviour
         generator.GenerateNew();
         generator.nextNew += 1;
 
+        GameObject.FindGameObjectWithTag("mainNews").GetComponent<NoticiaPrincipal>().ChangeTitle("Escoge un nuevo título");
+        GameObject.FindGameObjectWithTag("mainNews").GetComponent<NoticiaPrincipal>().ChangeSubtitle("Escoge un nuevo subtítulo");
 
     }
 
@@ -90,4 +96,5 @@ public class New : MonoBehaviour
         subTitle = newInProgress.subtitle.text;
         image = newInProgress.image.sprite;
     }
+
 }
