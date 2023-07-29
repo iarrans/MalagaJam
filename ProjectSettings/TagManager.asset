@@ -6,6 +6,8 @@ TagManager:
   tags:
   - mainNews
   - Delete
+  - LosePanel
+  - WinPanel
   layers:
   - Default
   - TransparentFX
