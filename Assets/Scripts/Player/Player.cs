@@ -13,6 +13,13 @@ public class Player : MonoBehaviour
     [SerializeField]
     int visualizationsForWin;
 
+    SanityEvents sanityEvents;
+
+    void Start()
+    {
+        sanityEvents = GetComponent<SanityEvents>();
+    }
+
     public void IncreaseVisualizations(int amount)
     {
         visualizations += amount;
@@ -43,6 +50,7 @@ public class Player : MonoBehaviour
     {
         sanity -= amount;
         textoCordura.text = sanity.ToString();
+        sanityEvents.CheckSanityEvent();
         if (sanity <= 0)
         {
             LoseGame();
