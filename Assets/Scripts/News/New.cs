@@ -7,7 +7,7 @@ public class New : MonoBehaviour
 {
     [Header("News List")]
     [SerializeField]
-    List<NewSO> newsList;
+    public List<NewSO> newsList;
 
     [Header("Current New")]
     [SerializeField]
