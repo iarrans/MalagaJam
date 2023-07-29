@@ -26,8 +26,6 @@ public class New : MonoBehaviour
 
     public NewsGenerator generator;
 
-    int currentNewId;
-
     void Update()
     {
         GetNewInProgress();
@@ -38,33 +36,38 @@ public class New : MonoBehaviour
         //TODO: pensar si al acertar algunas partes de la noticia puede llegar a dar visitas igualmente
         //o si sol hay dos sutiaciones posibles, fallo o acierto
         generator.GenerateNew();
-       
-        if (currentNew.title == title && currentNew.subTitle == subTitle && currentNew.image.name == image.name)
+
+        foreach (NewSO news in generator.allNews)
         {
-            CorrectNew();
+            if (title == news.title)
+            {
+                currentNew = news;
+                break;
+            }
+        }
+
+        Debug.Log("Current new " + currentNew.id + " " + currentNew.title + " " + currentNew.subTitle);
+        Debug.Log("In progress " + "subtitle=  " + subTitle + " image= " + image.name);
+        newsList.Remove(currentNew);
+
+        if (currentNew.subTitle == subTitle && currentNew.image.name == image.name)
+        {
+            player.IncreaseVisualizations(10);
+            player.DecreaseSanity(10);
+            Debug.Log("bien");
+        }
+        else if (currentNew.subTitle == subTitle || currentNew.image.name == image.name)
+        {
+            player.DecreaseVisualizations(5);
+            player.DecreaseSanity(5);
+            Debug.Log("medio bien");
         }
         else
         {
-            IncorrectNew();
+            player.DecreaseVisualizations(10);
+            player.DecreaseSanity(0);
+            Debug.Log("mal");
         }
-    }
-
-    //TODO: Si va a haber varios grados de fallo o acierto, la cantidad de incremento y decremento debe calcularse
-    void CorrectNew()
-    {
-        player.IncreaseVisualizations(10);
-        player.DecreaseSanity(10);
-
-        // Increase current new Id
-        currentNewId = currentNew.id;
-        currentNewId++;
-        currentNew = newsList[currentNewId];
-    }
-
-    void IncorrectNew()
-    {
-        player.DecreaseVisualizations(10);
-        player.IncreaseSanity(10);
     }
 
     void GetNewInProgress()
