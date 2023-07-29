@@ -39,7 +39,6 @@ public class New : MonoBehaviour
         //o si sol hay dos sutiaciones posibles, fallo o acierto
         generator.GenerateNew();
        
-
         if (currentNew.title == title && currentNew.subTitle == subTitle && currentNew.image.name == image.name)
         {
             CorrectNew();
