@@ -50,9 +50,6 @@ public class New : MonoBehaviour
             }
         }
 
-        Debug.Log("Current new " + currentNew.id + " " + currentNew.title + " " + currentNew.subTitle);
-        Debug.Log("In progress " + "subtitle=  " + subTitle + " image= " + image.name);
-
         if (currentNew.subTitle == subTitle && currentNew.image.name == image.name)
         {
             player.IncreaseVisualizations(10);
@@ -87,6 +84,8 @@ public class New : MonoBehaviour
         generator.GenerateNew();
         generator.nextNew += 1;
 
+        GameObject.FindGameObjectWithTag("mainNews").GetComponent<NoticiaPrincipal>().ChangeTitle("Escoge un nuevo título");
+        GameObject.FindGameObjectWithTag("mainNews").GetComponent<NoticiaPrincipal>().ChangeSubtitle("Escoge un nuevo subtítulo");
 
     }
 

@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
     public int sanity = 100;
     public TextMeshProUGUI textoCordura;
     public TextMeshProUGUI textoVisualizations;
+    public GameObject losePanel;
+    public GameObject winPanel;
 
     [SerializeField]
     int visualizationsForWin;
@@ -61,13 +63,11 @@ public class Player : MonoBehaviour
     {
         //No se si aqui va cinematica o que
         //Por ahora panel de victoria placeholder
-        GameObject winPanel = GameObject.FindGameObjectWithTag("WinPanel");
         winPanel.SetActive(true);
     }
 
     void LoseGame()
     {
-        GameObject losePanel = GameObject.FindGameObjectWithTag("LosePanel");
         losePanel.SetActive(true);
     }
 }
