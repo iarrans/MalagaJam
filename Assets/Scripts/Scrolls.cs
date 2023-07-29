@@ -99,7 +99,7 @@ public class Scrolls : MonoBehaviour
             titlesButtons.Add(button);
 
             //personalización botón
-            button.GetComponent<ImageButton>().buttonSprite = neew.image;
+            button.GetComponent<ImageButton>().buttonSprite.sprite = neew.image;
 
             //para la posición del botón. Relativizamos a botón padre y desplazamos hacia abajo
             button.GetComponent<RectTransform>().anchoredPosition = new Vector2(button.GetComponent<RectTransform>().anchoredPosition.x,
