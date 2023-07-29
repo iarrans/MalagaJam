@@ -63,10 +63,10 @@ public class Scrolls : MonoBehaviour
             GameObject button = Instantiate(subtitleButtonPrefab, subtitleButtonPrefab.transform.parent) as GameObject;
             button.tag = "Delete";
             button.SetActive(true);
-            titlesButtons.Add(button);
+            subtitlesButtons.Add(button);
 
             //personalización botón
-            button.GetComponent<SubtitleButton>().buttonText.text = neew.title;
+            button.GetComponent<SubtitleButton>().buttonText.text = neew.subTitle;
 
             //para la posición del botón. Relativizamos a botón padre y desplazamos hacia abajo
             button.GetComponent<RectTransform>().anchoredPosition = new Vector2(button.GetComponent<RectTransform>().anchoredPosition.x,
@@ -78,6 +78,28 @@ public class Scrolls : MonoBehaviour
                                                                                                   button.GetComponent<RectTransform>().sizeDelta.y * (distanciaY + 1)
                                                                                                   + 10 * (distanciaY + 1) + 20);
             distanciaY = distanciaY + 1;
+
+            foreach (string falseSub in neew.falseSubtitles)
+            {
+                GameObject buttonFalse = Instantiate(subtitleButtonPrefab, subtitleButtonPrefab.transform.parent) as GameObject;
+                buttonFalse.tag = "Delete";
+                buttonFalse.SetActive(true);
+                subtitlesButtons.Add(buttonFalse);
+
+                //personalización botón
+                buttonFalse.GetComponent<SubtitleButton>().buttonText.text = falseSub;
+
+                //para la posición del botón. Relativizamos a botón padre y desplazamos hacia abajo
+                buttonFalse.GetComponent<RectTransform>().anchoredPosition = new Vector2(buttonFalse.GetComponent<RectTransform>().anchoredPosition.x,
+                                                                                    buttonFalse.GetComponent<RectTransform>().anchoredPosition.y -
+                                                                                    buttonFalse.GetComponent<RectTransform>().sizeDelta.y * (distanciaY)
+                                                                                    - 10 * distanciaY);
+
+                subtitleButtonPrefab.transform.parent.GetComponent<RectTransform>().sizeDelta = new Vector2(subtitleButtonPrefab.transform.parent.GetComponent<RectTransform>().sizeDelta.x,
+                                                                                                      buttonFalse.GetComponent<RectTransform>().sizeDelta.y * (distanciaY + 1)
+                                                                                                      + 10 * (distanciaY + 1) + 20);
+                distanciaY = distanciaY + 1;
+            }
 
         }
 

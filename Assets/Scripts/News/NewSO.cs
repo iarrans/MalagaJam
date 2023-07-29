@@ -10,4 +10,8 @@ public class NewSO : ScriptableObject
     public string title;
     public string subTitle;
     public Sprite image;
+
+    public List<string> falseSubtitles;
+    public TipoNoticia tipoNoticia;
+
 }
