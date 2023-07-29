@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class SanityEvents : MonoBehaviour
 {
+    [SerializeField]
+    GameObject catEvent;
+
     Player player;
 
     void Start()
@@ -15,7 +18,7 @@ public class SanityEvents : MonoBehaviour
     {
         if (player.sanity <= 80  && player.sanity > 70)
         {
-            //patita de gato
+            StartCoroutine(CatEvent());
         }
         else if (player.sanity <= 70 && player.sanity > 60)
         {
@@ -33,5 +36,13 @@ public class SanityEvents : MonoBehaviour
         {
             //Meteorito
         }
+    }
+
+    IEnumerator CatEvent()
+    {
+        catEvent.SetActive(true);
+        AudioPlayer.Instance.PlaySFX("KeyboardHit");
+        yield return new WaitForSeconds(1);
+        catEvent.SetActive(false);
     }
 }
