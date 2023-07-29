@@ -10,6 +10,9 @@ public class New : MonoBehaviour
     Player player;
     
     public List<NewSO> newsList;
+    public List<string> titles;
+    public List<string> subtitles;
+    public List<Sprite> images;
 
 
     [Header("Current New")]
@@ -69,7 +72,11 @@ public class New : MonoBehaviour
             Debug.Log("mal");
         }
 
+        //eliminar noticia de todas las listas
         newsList.Remove(currentNew);
+        titles.Remove(currentNew.title);
+        subtitles.Remove(currentNew.subTitle);
+        images.Remove(currentNew.image);
 
         scrolls.PopulateImagesScroll();
         scrolls.PopulateSubtitlesScroll();
@@ -90,4 +97,5 @@ public class New : MonoBehaviour
         subTitle = newInProgress.subtitle.text;
         image = newInProgress.image.sprite;
     }
+
 }
