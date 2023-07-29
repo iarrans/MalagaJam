@@ -37,7 +37,7 @@ public class SanityEvents : MonoBehaviour
         } 
         else if (player.sanity <= 40 && player.sanity > 20)
         {
-            //Ovni
+            StartCoroutine(LizardEvent());
         }
         else if (player.sanity <= 20 && player.sanity > 10)
         {
