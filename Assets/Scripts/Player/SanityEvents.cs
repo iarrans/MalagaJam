@@ -11,13 +11,14 @@ public class SanityEvents : MonoBehaviour
     GameObject duckEvent;
     [SerializeField]
     GameObject otterEvent;
+    [SerializeField]
+    GameObject lizardEvent;
 
     Player player;
 
     void Start()
     {
         player = GetComponent<Player>();
-        StartCoroutine(OtterEvent());
     }
 
     public void CheckSanityEvent()
@@ -64,6 +65,14 @@ public class SanityEvents : MonoBehaviour
         AudioPlayer.Instance.PlaySFX("Otter");
         yield return new WaitForSeconds(7);
         otterEvent.SetActive(false);
+    }
+
+    IEnumerator LizardEvent()
+    {
+        lizardEvent.SetActive(true);
+        AudioPlayer.Instance.PlaySFX("Lizard");
+        yield return new WaitForSeconds(2);
+        lizardEvent.SetActive(false);
 
     }
 }
