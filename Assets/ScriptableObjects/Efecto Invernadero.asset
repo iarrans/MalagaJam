@@ -10,12 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d98103b7d39608942aa79060dd57a364, type: 3}
-  m_Name: New4
+  m_Name: Efecto Invernadero
   m_EditorClassIdentifier: 
-  id: 4
-  title: Noticia 5
-  subTitle: "Subt\xEDtulo 5"
+  id: 2
+  title: "Cat\xE1strofes imparables que pueden acabar con el ser humano."
+  subTitle: "Gases con efecto invernadero, amenazas nucleares, pandemias o nuestro
+    propio Sol explotando son solo unas pocas teor\xEDas que no se alejan de la realidad."
   image: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
   falseSubtitles:
-  - "Falso subt\xEDtulo 5"
-  tipoNoticia: 1
+  - Gases con efecto invernadero, amenazas nucleares, pandemias o nuestro propio
+    Sol explotando son un invento del gobierno para manipularnos.
+  tipoNoticia: 0

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d98103b7d39608942aa79060dd57a364, type: 3}
+  m_Name: Reptilianos
+  m_EditorClassIdentifier: 
+  id: 0
+  title: Aumentan las sospechas acerca de la familia real de Reino Separado y de
+    su verdadera identidad como reptilianos.
+  subTitle: "Adem\xE1s de los extra\xF1os sucesos que han estado ocurriendo en la
+    residencia real, se han encontrado varias mudas de piel escamosa del tama\xF1o
+    y forma de un ser humanoide."
+  image: {fileID: 0}
+  falseSubtitles:
+  - "Toda la poblaci\xF3n brit\xE1nica se ve reptilizada por los rayos del sol."
+  tipoNoticia: 0

@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d98103b7d39608942aa79060dd57a364, type: 3}
-  m_Name: New1
+  m_Name: SolDejaBrillar
   m_EditorClassIdentifier: 
   id: 1
-  title: Noticia rara
-  subTitle: "Porque si, porquemola, porque est\xE1 de moda."
+  title: El Sol deja de brillar.
+  subTitle: "La Agencia Espacial de Utrera ya pone fecha de expiraci\xF3n a nuestro
+    Sol."
   image: {fileID: 21300000, guid: 61783fdd7b6b5ac41b9d6b8648523db0, type: 3}
   falseSubtitles:
-  - Subtitulo falso noticia 2
-  - Subtitulo falso noticia 2 2
+  - "La Agencia Espacial de Utrera nos explica c\xF3mo el sol brillar\xE1 eternamente."
   tipoNoticia: 1

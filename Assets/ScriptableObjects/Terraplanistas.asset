@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d98103b7d39608942aa79060dd57a364, type: 3}
+  m_Name: Terraplanistas
+  m_EditorClassIdentifier: 
+  id: 0
+  title: Terraplanistas organizan un crucero para llegar al muro de hielo del fin
+    del mundo.
+  subTitle: "Esta aventura puede llegar a ser un fracaso ya que los sistemas de navegaci\xF3n
+    de las embarcaciones se basan en el hecho de que la Tierra es redonda."
+  image: {fileID: 21300000, guid: d8b298aca15cf3d4cb707fe5f0ec44a1, type: 3}
+  falseSubtitles:
+  - "Esta aventura puede llegar a ser un \xE9xito ya que si la Tierra fuese redonda,
+    todos los veh\xEDculos tendr\xEDan que tener cierta curvatura."
+  - Esta aventura puede llegar a ser todo un descubrimiento ya que la Tierra puede
+    ser plana y redonda a la vez.
+  tipoNoticia: 0

@@ -10,12 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d98103b7d39608942aa79060dd57a364, type: 3}
-  m_Name: New5
+  m_Name: Snasa
   m_EditorClassIdentifier: 
   id: 5
-  title: Noticia 6
-  subTitle: "Subt\xEDtulo 6"
+  title: "La SNASA alerta de un meteorito del tama\xF1o de Friafornia impactar\xE1
+    contra la Tierra."
+  subTitle: "La SNASA nos alerta de que un meteorito de m\xE1s de 700 kil\xF3metros
+    har\xE1 contacto con el planeta Tierra en los pr\xF3ximos d\xEDas."
   image: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
   falseSubtitles:
-  - "Falso subt\xEDtulo 6"
+  - "La SNASA nos alerta de que la Luna impactar\xE1 sobre la Tierra en los pr\xF3ximos
+    d\xEDas."
   tipoNoticia: 1

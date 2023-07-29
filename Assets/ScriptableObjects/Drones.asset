@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d98103b7d39608942aa79060dd57a364, type: 3}
-  m_Name: New3
+  m_Name: Drones
   m_EditorClassIdentifier: 
-  id: 3
-  title: Noticia 4
-  subTitle: "Subt\xEDtulo 4"
-  image: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  id: 0
+  title: "\xA1No te lo vas a creer! Las palomas son drones."
+  subTitle: "Varios exmilitares declaran hoy en un juicio llevado a cabo en Malag\xE1laga
+    que, las palomas, son enrealidad dispositivos utilizados para espiar a los ciudadanos."
+  image: {fileID: 0}
   falseSubtitles:
-  - "Falso subt\xEDtulo 4"
-  tipoNoticia: 1
+  - El gobierno emplea estas palomas para espiar a los ciudadanos.
+  tipoNoticia: 0
