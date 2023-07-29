@@ -16,7 +16,6 @@ MonoBehaviour:
   title: El Sol deja de brillar.
   subTitle: "La Agencia Espacial de Utrera ya pone fecha de expiraci\xF3n a nuestro
     Sol."
-  image: {fileID: 21300000, guid: 61783fdd7b6b5ac41b9d6b8648523db0, type: 3}
-  falseSubtitles:
-  - "La Agencia Espacial de Utrera nos explica c\xF3mo el sol brillar\xE1 eternamente."
+  image: {fileID: 21300000, guid: 5b841a024a700c847ba4d78a22e33473, type: 3}
+  falseSubtitles: []
   tipoNoticia: 1

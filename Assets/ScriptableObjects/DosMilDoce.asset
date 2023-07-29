@@ -16,7 +16,7 @@ MonoBehaviour:
   title: "La pel\xEDcula \"Dos Mil Doce\" arrasa tanto en cines como en la vida real."
   subTitle: "La recien estrenada pel\xEDcula \"Dos Mil Doce\" se equivoca en los
     a\xF1os pero no en los hechos, nos cuentan los espectadores."
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 75caaca6685bbdf4ead8007f2f25f07c, type: 3}
   falseSubtitles:
   - "La comedia \"Dos Mil Doce\" hace llorar de la risa a sus espectadores logrando
     ser la pel\xEDcula m\xE1s graciosa de la historia."

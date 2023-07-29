@@ -16,7 +16,7 @@ MonoBehaviour:
   title: "\xA1No te lo vas a creer! Las palomas son drones."
   subTitle: "Varios exmilitares declaran hoy en un juicio llevado a cabo en Malag\xE1laga
     que, las palomas, son enrealidad dispositivos utilizados para espiar a los ciudadanos."
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 639242c9f38983645b1a8963927ad0b9, type: 3}
   falseSubtitles:
   - El gobierno emplea estas palomas para espiar a los ciudadanos.
   tipoNoticia: 0

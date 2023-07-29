@@ -16,7 +16,7 @@ MonoBehaviour:
   title: El Paticano advierte de la llegada del diluvio universal de patos de goma.
   subTitle: "El Patipapa ha asegurado hoy en una entrevista estar creando una barca
     para poder cuidar de sus creyentes pat\xF3licos."
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: c6424b64f4c66b445aa83a85e2ee2fc4, type: 3}
   falseSubtitles:
   - El Patipapa ha asegurado hoy en una rueda de prensa que el diluvio universal
     es completamente falso.

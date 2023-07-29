@@ -17,7 +17,7 @@ MonoBehaviour:
     la IA  MJW 1.6."
   subTitle: "Diputados del congreso de EE.SS. declaran ante las c\xE1maras que el
     propio gobierno est\xE1 subyugado ante la IA."
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: b167ee9ad685ebb44b4a7749a121e364, type: 3}
   falseSubtitles:
   - "El presidente del gobierno de EE.SS. declara en una rueda de prensa que no est\xE1
     siendo manipulado por ninguna IA y que se trata de un bulo."

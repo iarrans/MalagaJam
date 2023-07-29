@@ -16,7 +16,7 @@ MonoBehaviour:
   title: "Nueva invasi\xF3n al \xE1rea 55."
   subTitle: "Se repite el fen\xF3meno de la invasi\xF3n al \xE1rea 55, esta vez,
     para rescatar a los aliens que el gobierno de EE.SS. ha asegurado tener en cautiverio."
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 5e6e2df871996f84b895ffd6596da483, type: 3}
   falseSubtitles:
   - "El fen\xF3meno ocurrido en 2019 se repite. M\xE1s de 20.000 personas se organizan
     para asaltar el \xE1rea 55 para tomar caf\xE9 con los soldados."
