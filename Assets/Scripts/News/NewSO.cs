@@ -9,5 +9,5 @@ public class NewSO : ScriptableObject
     public int id;
     public string title;
     public string subTitle;
-    public Image image;
+    public Sprite image;
 }

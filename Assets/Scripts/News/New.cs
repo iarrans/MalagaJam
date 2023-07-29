@@ -5,9 +5,12 @@ using UnityEngine.UI;
 
 public class New : MonoBehaviour
 {
-    [Header("News List")]
+    [Header("Player")]
     [SerializeField]
+    Player player;
+    
     public List<NewSO> newsList;
+
 
     [Header("Current New")]
     [SerializeField]
@@ -19,13 +22,13 @@ public class New : MonoBehaviour
     [SerializeField]
     string subTitle;
     [SerializeField]
-    Image image;
+    Sprite image;
 
     int currentNewId;
 
     void Update()
     {
-        
+        GetNewInProgress();
     }
 
     public void CheckNew()
@@ -42,13 +45,13 @@ public class New : MonoBehaviour
         }
     }
 
+    //TODO: Si va a haber varios grados de fallo o acierto, la cantidad de incremento y decremento debe calcularse
     void CorrectNew()
     {
-        //Aumentar visitas
+        player.IncreaseVisualizations(10);
+        player.DecreaseSanity(10);
 
-        //Perder cordura
-
-        //Aumentar Id de noticia actual
+        // Increase current new Id
         currentNewId = currentNew.id;
         currentNewId++;
         currentNew = newsList[currentNewId];
@@ -56,12 +59,15 @@ public class New : MonoBehaviour
 
     void IncorrectNew()
     {
-        //Perder visitas
-        //Ganar cordura     
+        player.DecreaseVisualizations(10);
+        player.IncreaseSanity(10);
     }
 
     void GetNewInProgress()
     {
-
+        NoticiaPrincipal newInProgress = GameObject.FindGameObjectWithTag("mainNews").GetComponent<NoticiaPrincipal>();
+        title = newInProgress.title.text;
+        subTitle = newInProgress.subtitle.text;
+        image = newInProgress.image.sprite;
     }
 }

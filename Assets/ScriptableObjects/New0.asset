@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d98103b7d39608942aa79060dd57a364, type: 3}
-  m_Name: News0
+  m_Name: New0
   m_EditorClassIdentifier: 
+  id: 0
   title: Efecto 2000
   subTitle: "Llego el a\xF1o nuevo y de repente PUM"
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: d8b298aca15cf3d4cb707fe5f0ec44a1, type: 3}
