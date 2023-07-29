@@ -9,6 +9,10 @@ public class SanityEvents : MonoBehaviour
     GameObject catEvent;
     [SerializeField]
     GameObject duckEvent;
+    [SerializeField]
+    GameObject otterEvent;
+    [SerializeField]
+    GameObject lizardEvent;
 
     Player player;
 
@@ -29,11 +33,11 @@ public class SanityEvents : MonoBehaviour
         }
         else if (player.sanity <= 60 && player.sanity > 40)
         {
-            //abejas
+            StartCoroutine(OtterEvent());
         } 
         else if (player.sanity <= 40 && player.sanity > 20)
         {
-            //Ovni
+            StartCoroutine(LizardEvent());
         }
         else if (player.sanity <= 20 && player.sanity > 10)
         {
@@ -53,5 +57,22 @@ public class SanityEvents : MonoBehaviour
     {
         duckEvent.SetActive(true);
         AudioPlayer.Instance.PlaySFX("Duck");
+    }
+
+    IEnumerator OtterEvent()
+    {
+        otterEvent.SetActive(true);
+        AudioPlayer.Instance.PlaySFX("Otter");
+        yield return new WaitForSeconds(7);
+        otterEvent.SetActive(false);
+    }
+
+    IEnumerator LizardEvent()
+    {
+        lizardEvent.SetActive(true);
+        AudioPlayer.Instance.PlaySFX("Lizard");
+        yield return new WaitForSeconds(2);
+        lizardEvent.SetActive(false);
+
     }
 }
