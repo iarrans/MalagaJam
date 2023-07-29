@@ -55,6 +55,7 @@ public class New : MonoBehaviour
             player.IncreaseVisualizations(10);
             player.DecreaseSanity(10);
             Debug.Log("bien");
+            player.correctNews++;
         }
         else if (currentNew.subTitle == subTitle || currentNew.image.name == image.name)
         {

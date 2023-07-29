@@ -13,11 +13,10 @@ public class Player : MonoBehaviour
     public TextMeshProUGUI textoVisualizations;
     public GameObject losePanel;
     public GameObject winPanel;
+    public int correctNews;
+    public int numberWinningNews;
 
     public Image medidorCordura;
-
-    [SerializeField]
-    int visualizationsForWin;
 
     SanityEvents sanityEvents;
 
@@ -30,7 +29,7 @@ public class Player : MonoBehaviour
     {
         visualizations += amount;
         textoVisualizations.text = visualizations.ToString();
-        if (visualizations > visualizationsForWin)
+        if (correctNews > numberWinningNews)
         {
             WinGame();
         }
@@ -70,6 +69,7 @@ public class Player : MonoBehaviour
         //No se si aqui va cinematica o que
         //Por ahora panel de victoria placeholder
         winPanel.SetActive(true);
+        
     }
 
     void LoseGame()
