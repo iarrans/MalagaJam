@@ -93,7 +93,7 @@ public class Scrolls : MonoBehaviour
         {
 
             //instanciación botón
-            GameObject button = Instantiate(subtitleButtonPrefab, subtitleButtonPrefab.transform.parent) as GameObject;
+            GameObject button = Instantiate(imageButtonPrefab, imageButtonPrefab.transform.parent) as GameObject;
             button.tag = "Delete";
             button.SetActive(true);
             titlesButtons.Add(button);
@@ -103,11 +103,11 @@ public class Scrolls : MonoBehaviour
 
             //para la posición del botón. Relativizamos a botón padre y desplazamos hacia abajo
             button.GetComponent<RectTransform>().anchoredPosition = new Vector2(button.GetComponent<RectTransform>().anchoredPosition.x,
-                                                                                button.GetComponent<RectTransform>().anchoredPosition.y -
-                                                                                button.GetComponent<RectTransform>().sizeDelta.y * (distanciaY)
-                                                                                - 10 * distanciaY);
+                                                                     button.GetComponent<RectTransform>().anchoredPosition.y -
+                                                                     button.GetComponent<RectTransform>().sizeDelta.y * (distanciaY)
+                                                                     - 10 * distanciaY);
 
-            subtitleButtonPrefab.transform.parent.GetComponent<RectTransform>().sizeDelta = new Vector2(subtitleButtonPrefab.transform.parent.GetComponent<RectTransform>().sizeDelta.x,
+            imageButtonPrefab.transform.parent.GetComponent<RectTransform>().sizeDelta = new Vector2(imageButtonPrefab.transform.parent.GetComponent<RectTransform>().sizeDelta.x,
                                                                                                   button.GetComponent<RectTransform>().sizeDelta.y * (distanciaY + 1)
                                                                                                   + 10 * (distanciaY + 1) + 20);
             distanciaY = distanciaY + 1;
