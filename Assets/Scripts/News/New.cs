@@ -24,6 +24,8 @@ public class New : MonoBehaviour
     [SerializeField]
     Sprite image;
 
+    public NewsGenerator generator;
+
     int currentNewId;
 
     void Update()
@@ -35,6 +37,9 @@ public class New : MonoBehaviour
     {
         //TODO: pensar si al acertar algunas partes de la noticia puede llegar a dar visitas igualmente
         //o si sol hay dos sutiaciones posibles, fallo o acierto
+        generator.GenerateNew();
+       
+
         if (currentNew.title == title && currentNew.subTitle == subTitle && currentNew.image.name == image.name)
         {
             CorrectNew();
