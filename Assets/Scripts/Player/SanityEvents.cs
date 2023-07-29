@@ -17,6 +17,7 @@ public class SanityEvents : MonoBehaviour
     void Start()
     {
         player = GetComponent<Player>();
+        StartCoroutine(OtterEvent());
     }
 
     public void CheckSanityEvent()
