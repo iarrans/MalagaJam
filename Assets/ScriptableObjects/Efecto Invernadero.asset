@@ -16,7 +16,7 @@ MonoBehaviour:
   title: "Cat\xE1strofes imparables que pueden acabar con el ser humano."
   subTitle: "Gases con efecto invernadero, amenazas nucleares, pandemias o nuestro
     propio Sol explotando son solo unas pocas teor\xEDas que no se alejan de la realidad."
-  image: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  image: {fileID: 21300000, guid: 027bf56c37dd0a1499b4e035cee581ca, type: 3}
   falseSubtitles:
   - Gases con efecto invernadero, amenazas nucleares, pandemias o nuestro propio
     Sol explotando son un invento del gobierno para manipularnos.

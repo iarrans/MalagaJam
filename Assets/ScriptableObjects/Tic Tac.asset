@@ -16,7 +16,7 @@ MonoBehaviour:
   title: "Viajero del tiempo de Tic Tac confirma una inminente invasi\xF3n alien\xEDgena."
   subTitle: "El tictaqueer asegura que el alien\xEDgena le ha confesado la destrucci\xF3n
     de la Tierra por los suyos s\xF3lo porquen los seres humanos le caen mal."
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: dffdc39d19d73844188166ea0db04820, type: 3}
   falseSubtitles:
   - "El mismo alien\xEDgena ha testificado ante los periodistas que el presidente
     de su planeta quiere lanzar un rayo destructor hacia la Tierra."

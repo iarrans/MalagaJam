@@ -16,7 +16,7 @@ MonoBehaviour:
   title: 69 segundos para el apocalipsis.
   subTitle: La emergencia medioambiental junto con el riesgo nuclear aceleran las
     probabilidades de que deje de existir vida en la Tierra.
-  image: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  image: {fileID: 21300000, guid: efd802e8386eded4594c2d9a0367cede, type: 3}
   falseSubtitles:
   - "La emergencia medioambiental junto con el riesgo nuclear hacen m\xE1s f\xE9rtiles
     los campos de la pen\xEDnsula."

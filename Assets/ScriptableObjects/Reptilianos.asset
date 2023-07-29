@@ -18,7 +18,7 @@ MonoBehaviour:
   subTitle: "Adem\xE1s de los extra\xF1os sucesos que han estado ocurriendo en la
     residencia real, se han encontrado varias mudas de piel escamosa del tama\xF1o
     y forma de un ser humanoide."
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 74e76b9d2215ec143943ab5d29c20fae, type: 3}
   falseSubtitles:
   - "Toda la poblaci\xF3n brit\xE1nica se ve reptilizada por los rayos del sol."
   tipoNoticia: 0

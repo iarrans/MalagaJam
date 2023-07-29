@@ -16,7 +16,7 @@ MonoBehaviour:
   title: "\xBFSer\xE1 el fin de la humanidad una enfermedad?"
   subTitle: La OMG asegura el surgimiento de una nueva enfermedad procedente de Marte
     llamada "PlebeVirus".
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: f5dba6bfc53094247b14f4992b995c62, type: 3}
   falseSubtitles:
   - "La OMG asegura que no habr\xE1 ninguna enfermedad que pueda acabar con la humanidad."
   tipoNoticia: 0
