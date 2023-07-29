@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d98103b7d39608942aa79060dd57a364, type: 3}
+  m_Name: I.Patolica
+  m_EditorClassIdentifier: 
+  id: 4
+  title: "\xBFC\xF3mo se nos sugiere el apocalipsis seg\xFAn la iglesia Pat\xF3lica?"
+  subTitle: "El fin llegar\xE1 en dos partes: la primera es que Dios destruir\xE1
+    todas las religiones y la segunda llegar\xE1 lo que los pat\xF3licos conocen
+    como \u201CPatoged\xF3n\u201D."
+  image: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  falseSubtitles:
+  - "-El fin llegar\xE1 en dos partes: la primera es que Dios destruir\xE1 todas
+    las religiones y la segunda llegar\xE1 lo que los pastafaristas conocen como
+    \"Pastaged\xF3n\"."
+  - "El fin llegar\xE1 en dos partes: la primera es que Dios destruir\xE1 todas las
+    religiones y la segunda llegar\xE1 lo que los paf\xEDcicos conocen como \"Pacifiged\xF3n\"."
+  tipoNoticia: 1

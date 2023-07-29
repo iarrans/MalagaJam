@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d98103b7d39608942aa79060dd57a364, type: 3}
-  m_Name: New0
+  m_Name: DosMilDoce
   m_EditorClassIdentifier: 
   id: 0
-  title: Efecto 2000
-  subTitle: "Llego el a\xF1o nuevo y de repente PUM"
-  image: {fileID: 21300000, guid: d8b298aca15cf3d4cb707fe5f0ec44a1, type: 3}
+  title: "La pel\xEDcula \"Dos Mil Doce\" arrasa tanto en cines como en la vida real."
+  subTitle: "La recien estrenada pel\xEDcula \"Dos Mil Doce\" se equivoca en los
+    a\xF1os pero no en los hechos, nos cuentan los espectadores."
+  image: {fileID: 0}
   falseSubtitles:
-  - Subtitulo falso noticia 1
-  - Subtitulo falso noticia 1 2
+  - "La comedia \"Dos Mil Doce\" hace llorar de la risa a sus espectadores logrando
+    ser la pel\xEDcula m\xE1s graciosa de la historia."
   tipoNoticia: 0
