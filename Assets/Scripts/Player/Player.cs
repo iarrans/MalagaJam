@@ -2,15 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
     public int visualizations = 0;
-    public int sanity = 100;
+    public float sanity = 100;
+    float maxSanity = 100;
     public TextMeshProUGUI textoCordura;
     public TextMeshProUGUI textoVisualizations;
     public GameObject losePanel;
     public GameObject winPanel;
+
+    public Image medidorCordura;
 
     [SerializeField]
     int visualizationsForWin;
@@ -46,12 +50,14 @@ public class Player : MonoBehaviour
     {
         sanity += amount;
         textoCordura.text = sanity.ToString();
+        medidorCordura.fillAmount = amount;
     }
 
     public void DecreaseSanity(int amount)
     {
         sanity -= amount;
         textoCordura.text = sanity.ToString();
+        medidorCordura.fillAmount = sanity/maxSanity;
         sanityEvents.CheckSanityEvent();
         if (sanity <= 0)
         {
