@@ -16,7 +16,7 @@ public class NewsGenerator : MonoBehaviour
         {
             Debug.Log(nextNew);
             GenerateNew();
-            nextNew++;
+            nextNew+=1;
         }
     }
 
