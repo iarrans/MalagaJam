@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class SanityEvents : MonoBehaviour
 {
+    [Header("Events")]
     [SerializeField]
     GameObject catEvent;
+    [SerializeField]
+    GameObject duckEvent;
 
     Player player;
 
@@ -22,7 +25,7 @@ public class SanityEvents : MonoBehaviour
         }
         else if (player.sanity <= 70 && player.sanity > 60)
         {
-            //Nutria gay
+            DuckEvent();
         }
         else if (player.sanity <= 60 && player.sanity > 40)
         {
@@ -44,5 +47,11 @@ public class SanityEvents : MonoBehaviour
         AudioPlayer.Instance.PlaySFX("KeyboardHit");
         yield return new WaitForSeconds(1);
         catEvent.SetActive(false);
+    }
+
+    void DuckEvent()
+    {
+        duckEvent.SetActive(true);
+        AudioPlayer.Instance.PlaySFX("Duck");
     }
 }
