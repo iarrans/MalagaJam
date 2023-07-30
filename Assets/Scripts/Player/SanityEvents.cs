@@ -18,14 +18,24 @@ public class SanityEvents : MonoBehaviour
 
     Player player;
 
+    bool catEventFlag;
+    bool otterEventFlag;
+    bool ovniEventFlag;
+    bool meteorEventFlag;
+
     void Start()
     {
         player = GetComponent<Player>();
     }
 
+    void Update()
+    {
+        
+    }
+
     public void CheckSanityEvent()
     {
-        if (player.sanity <= 80  && player.sanity > 70)
+        if (player.sanity <= 80  && player.sanity > 70 && catEventFlag == false)
         {
             StartCoroutine(CatEvent());
         }
@@ -33,15 +43,15 @@ public class SanityEvents : MonoBehaviour
         {
             StartCoroutine(DuckEvent());
         }
-        else if (player.sanity <= 60 && player.sanity > 40)
+        else if (player.sanity <= 60 && player.sanity > 40 && otterEventFlag == false)
         {
             StartCoroutine(OtterEvent());
         } 
-        else if (player.sanity <= 40 && player.sanity > 20)
+        else if (player.sanity <= 40 && player.sanity > 20 && ovniEventFlag == false)
         {
             StartCoroutine(OvniEvent());
         }
-        else if (player.sanity <= 20 && player.sanity > 10)
+        else if (player.sanity <= 20 && meteorEventFlag == false)
         {
             StartCoroutine(MeteorEvent());
         }
@@ -49,10 +59,15 @@ public class SanityEvents : MonoBehaviour
 
     IEnumerator CatEvent()
     {
-        catEvent.SetActive(true);
-        AudioPlayer.Instance.PlaySFX("KeyboardHit");
-        yield return new WaitForSeconds(1);
-        catEvent.SetActive(false);
+        catEventFlag = true;
+        while (catEventFlag)
+        {
+            catEvent.SetActive(true);
+            AudioPlayer.Instance.PlaySFX("KeyboardHit");
+            yield return new WaitForSeconds(1);
+            catEvent.SetActive(false);
+            yield return new WaitForSeconds(Random.Range(5, 10));
+        }
     }
 
     IEnumerator DuckEvent()
@@ -67,10 +82,15 @@ public class SanityEvents : MonoBehaviour
 
     IEnumerator OtterEvent()
     {
-        otterEvent.SetActive(true);
-        AudioPlayer.Instance.PlaySFX("Otter");
-        yield return new WaitForSeconds(7);
-        otterEvent.SetActive(false);
+        otterEventFlag = true;
+        while (otterEventFlag)
+        {
+            otterEvent.SetActive(true);
+            AudioPlayer.Instance.PlaySFX("Otter");
+            yield return new WaitForSeconds(6.5f);
+            otterEvent.SetActive(false);
+            yield return new WaitForSeconds(Random.Range(7, 12));
+        }
     }
 
     //IEnumerator LizardEvent()
@@ -83,17 +103,27 @@ public class SanityEvents : MonoBehaviour
 
     IEnumerator OvniEvent()
     {
-        ovniEvent.SetActive(true);
-        AudioPlayer.Instance.PlaySFX("Ovni");
-        yield return new WaitForSeconds(2);
-        ovniEvent.SetActive(false);
+        ovniEventFlag = true;
+        while(ovniEventFlag)
+        {
+            ovniEvent.SetActive(true);
+            AudioPlayer.Instance.PlaySFX("Ovni");
+            yield return new WaitForSeconds(6);
+            ovniEvent.SetActive(false);
+            yield return new WaitForSeconds(Random.Range(7, 12));
+        }
     }
 
     IEnumerator MeteorEvent()
     {
-        meteorEvent.SetActive(true);
-        AudioPlayer.Instance.PlaySFX("Asteroide");
-        yield return new WaitForSeconds(6);
-        meteorEvent.SetActive(false);
+        meteorEventFlag = true;
+        while (meteorEventFlag)
+        {
+            meteorEvent.SetActive(true);
+            AudioPlayer.Instance.PlaySFX("Asteroide");
+            yield return new WaitForSeconds(6);
+            meteorEvent.SetActive(false);
+            yield return new WaitForSeconds(Random.Range(7, 12));
+        }
     }
 }
