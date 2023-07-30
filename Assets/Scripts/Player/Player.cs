@@ -25,6 +25,14 @@ public class Player : MonoBehaviour
         sanityEvents = GetComponent<SanityEvents>();
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            AudioPlayer.Instance.PlaySFX("Click");
+        }
+    }
+
     public void IncreaseVisualizations(int amount)
     {
         visualizations += amount;
