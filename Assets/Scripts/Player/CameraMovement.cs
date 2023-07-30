@@ -12,8 +12,8 @@ public class CameraMovement : MonoBehaviour
 	}
 
 	[Range(0.1f, 9f)] [SerializeField] float sensitivity = 2f;
-	[Range(0f, 90f)] [SerializeField] float yRotationLimit = 88f;
-	[Range(0f, 90f)] [SerializeField] float xRotationLimit = 88f;
+	[Range(0f, 90f)] [SerializeField] float yRotationLimit = 30f;
+	[Range(0f, 90f)] [SerializeField] float xRotationLimit = 30f;
 
 	Vector2 rotation = Vector2.zero;
 	const string xAxis = "Mouse X";
