@@ -68,6 +68,7 @@ public class New : MonoBehaviour
             player.DecreaseVisualizations(5);
             player.DecreaseSanity(5);
             Debug.Log("regular");
+            AudioPlayer.Instance.PlaySFX("RegularNew");
         }
         else
         {
