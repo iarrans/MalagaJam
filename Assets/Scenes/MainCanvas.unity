@@ -3544,7 +3544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c30b0e178cbda04192b205a22cca060, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  visualizations: 4
+  visualizations: 100
   sanity: 100
   textoCordura: {fileID: 145519595}
   textoVisualizations: {fileID: 60123767}
@@ -5003,7 +5003,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.002208417, y: 0}
+  m_AnchoredPosition: {x: 0.0008148498, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2090166287
@@ -5198,6 +5198,10 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2633251236976675303, guid: b10410c0abf871a4eb6b0865af8f3b40, type: 3}
+      propertyPath: musicClips.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2633251236976675303, guid: b10410c0abf871a4eb6b0865af8f3b40, type: 3}
       propertyPath: sfxClips.Array.data[0].Clip
       value: 
       objectReference: {fileID: 8300000, guid: b6f98fe649c6a5f49b894e662198fdbf, type: 3}
@@ -5226,6 +5230,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: cf4d6745e0061a24bbb3b3f15af795bf, type: 3}
     - target: {fileID: 2633251236976675303, guid: b10410c0abf871a4eb6b0865af8f3b40, type: 3}
+      propertyPath: musicClips.Array.data[0].Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: f9e4c357c4d8f1f4ab4f4ce52404511d, type: 3}
+    - target: {fileID: 2633251236976675303, guid: b10410c0abf871a4eb6b0865af8f3b40, type: 3}
       propertyPath: sfxClips.Array.data[0].Volume
       value: 1
       objectReference: {fileID: 0}
@@ -5251,6 +5259,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2633251236976675303, guid: b10410c0abf871a4eb6b0865af8f3b40, type: 3}
       propertyPath: sfxClips.Array.data[6].Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2633251236976675303, guid: b10410c0abf871a4eb6b0865af8f3b40, type: 3}
+      propertyPath: musicClips.Array.data[0].Volume
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5743889634581012368, guid: b10410c0abf871a4eb6b0865af8f3b40, type: 3}
