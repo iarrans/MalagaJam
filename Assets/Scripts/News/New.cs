@@ -31,6 +31,11 @@ public class New : MonoBehaviour
 
     public NewsGenerator generator;
 
+    void Start()
+    {
+        AudioPlayer.Instance.PlayMusic("SonidoAmbiente");
+    }
+
     void Update()
     {
         GetNewInProgress();
@@ -55,6 +60,7 @@ public class New : MonoBehaviour
             player.IncreaseVisualizations(10);
             player.DecreaseSanity(10);
             Debug.Log("bien");
+            AudioPlayer.Instance.PlaySFX("SonidoCorrecto");
             player.correctNews++;
         }
         else if (currentNew.subTitle == subTitle || currentNew.image.name == image.name)
@@ -68,6 +74,7 @@ public class New : MonoBehaviour
             player.DecreaseVisualizations(10);
             player.DecreaseSanity(0);
             Debug.Log("mal");
+            AudioPlayer.Instance.PlaySFX("SonidoIncorrecto");
         }
 
         //eliminar noticia de todas las listas

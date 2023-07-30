@@ -5003,7 +5003,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.0023308804, y: 0}
+  m_AnchoredPosition: {x: 0.0045231916, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2090166287
@@ -5195,7 +5195,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2633251236976675303, guid: b10410c0abf871a4eb6b0865af8f3b40, type: 3}
       propertyPath: sfxClips.Array.size
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2633251236976675303, guid: b10410c0abf871a4eb6b0865af8f3b40, type: 3}
       propertyPath: sfxClips.Array.data[0].Clip
@@ -5218,6 +5218,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 01869cdb6b3ecae42aad5ebb5586dcc0, type: 3}
     - target: {fileID: 2633251236976675303, guid: b10410c0abf871a4eb6b0865af8f3b40, type: 3}
+      propertyPath: sfxClips.Array.data[5].Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: cd04e2d22578dc341acb0e6c87dd57ba, type: 3}
+    - target: {fileID: 2633251236976675303, guid: b10410c0abf871a4eb6b0865af8f3b40, type: 3}
+      propertyPath: sfxClips.Array.data[6].Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: cf4d6745e0061a24bbb3b3f15af795bf, type: 3}
+    - target: {fileID: 2633251236976675303, guid: b10410c0abf871a4eb6b0865af8f3b40, type: 3}
       propertyPath: sfxClips.Array.data[0].Volume
       value: 1
       objectReference: {fileID: 0}
@@ -5235,6 +5243,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2633251236976675303, guid: b10410c0abf871a4eb6b0865af8f3b40, type: 3}
       propertyPath: sfxClips.Array.data[4].Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2633251236976675303, guid: b10410c0abf871a4eb6b0865af8f3b40, type: 3}
+      propertyPath: sfxClips.Array.data[5].Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2633251236976675303, guid: b10410c0abf871a4eb6b0865af8f3b40, type: 3}
+      propertyPath: sfxClips.Array.data[6].Volume
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5743889634581012368, guid: b10410c0abf871a4eb6b0865af8f3b40, type: 3}
