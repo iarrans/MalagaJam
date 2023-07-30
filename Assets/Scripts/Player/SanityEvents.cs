@@ -66,7 +66,7 @@ public class SanityEvents : MonoBehaviour
             AudioPlayer.Instance.PlaySFX("KeyboardHit");
             yield return new WaitForSeconds(1);
             catEvent.SetActive(false);
-            yield return new WaitForSeconds(Random.Range(5, 10));
+            yield return new WaitForSeconds(Random.Range(15, 20));
         }
     }
 
@@ -89,7 +89,7 @@ public class SanityEvents : MonoBehaviour
             AudioPlayer.Instance.PlaySFX("Otter");
             yield return new WaitForSeconds(6.5f);
             otterEvent.SetActive(false);
-            yield return new WaitForSeconds(Random.Range(7, 12));
+            yield return new WaitForSeconds(Random.Range(10, 15));
         }
     }
 
