@@ -8,11 +8,13 @@ public class SanityEvents : MonoBehaviour
     [SerializeField]
     GameObject catEvent;
     [SerializeField]
-    GameObject duckEvent;
+    GameObject[] duckEvent;
     [SerializeField]
     GameObject otterEvent;
     [SerializeField]
-    GameObject lizardEvent;
+    GameObject ovniEvent;
+    [SerializeField]
+    GameObject meteorEvent;
 
     Player player;
 
@@ -29,7 +31,7 @@ public class SanityEvents : MonoBehaviour
         }
         else if (player.sanity <= 70 && player.sanity > 60)
         {
-            DuckEvent();
+            StartCoroutine(DuckEvent());
         }
         else if (player.sanity <= 60 && player.sanity > 40)
         {
@@ -37,11 +39,11 @@ public class SanityEvents : MonoBehaviour
         } 
         else if (player.sanity <= 40 && player.sanity > 20)
         {
-            StartCoroutine(LizardEvent());
+            StartCoroutine(OvniEvent());
         }
         else if (player.sanity <= 20 && player.sanity > 10)
         {
-            //Meteorito
+            StartCoroutine(MeteorEvent());
         }
     }
 
@@ -53,10 +55,14 @@ public class SanityEvents : MonoBehaviour
         catEvent.SetActive(false);
     }
 
-    void DuckEvent()
+    IEnumerator DuckEvent()
     {
-        duckEvent.SetActive(true);
-        AudioPlayer.Instance.PlaySFX("Duck");
+        foreach (var item in duckEvent)
+        {
+            item.SetActive(true);
+            AudioPlayer.Instance.PlaySFX("Duck");
+            yield return new WaitForSeconds(10);
+        }
     }
 
     IEnumerator OtterEvent()
@@ -67,12 +73,27 @@ public class SanityEvents : MonoBehaviour
         otterEvent.SetActive(false);
     }
 
-    IEnumerator LizardEvent()
-    {
-        lizardEvent.SetActive(true);
-        AudioPlayer.Instance.PlaySFX("Lizard");
-        yield return new WaitForSeconds(2);
-        lizardEvent.SetActive(false);
+    //IEnumerator LizardEvent()
+    //{
+    //    lizardEvent.SetActive(true);
+    //    AudioPlayer.Instance.PlaySFX("Lizard");
+    //    yield return new WaitForSeconds(2);
+    //    lizardEvent.SetActive(false);
+    //}
 
+    IEnumerator OvniEvent()
+    {
+        ovniEvent.SetActive(true);
+        AudioPlayer.Instance.PlaySFX("Ovni");
+        yield return new WaitForSeconds(2);
+        ovniEvent.SetActive(false);
+    }
+
+    IEnumerator MeteorEvent()
+    {
+        meteorEvent.SetActive(true);
+        AudioPlayer.Instance.PlaySFX("Asteroide");
+        yield return new WaitForSeconds(6);
+        meteorEvent.SetActive(false);
     }
 }
