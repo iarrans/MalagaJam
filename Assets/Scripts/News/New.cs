@@ -72,7 +72,7 @@ public class New : MonoBehaviour
         else
         {
             player.DecreaseVisualizations(10);
-            player.DecreaseSanity(0);
+            player.DecreaseSanity(5);
             Debug.Log("mal");
             AudioPlayer.Instance.PlaySFX("SonidoIncorrecto");
         }
