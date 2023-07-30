@@ -77,11 +77,13 @@ public class Player : MonoBehaviour
         //No se si aqui va cinematica o que
         //Por ahora panel de victoria placeholder
         winPanel.SetActive(true);
+        AudioPlayer.Instance.StopSfx();
         
     }
 
     void LoseGame()
     {
         losePanel.SetActive(true);
+        AudioPlayer.Instance.StopSfx();
     }
 }

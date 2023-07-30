@@ -32,7 +32,7 @@ public class AudioPlayer : MonoBehaviour
         }
         else
         {
-            //Destroy(gameObject);
+            Destroy(gameObject);
         }
     }
 
